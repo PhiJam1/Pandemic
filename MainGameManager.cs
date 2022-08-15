@@ -600,11 +600,13 @@ public class MainGameManager : MonoBehaviour
     {
         bool gaveCard = false;
 
-        //To give a card
+        //Make sure they are in the same city
         if (gamePlayers[lastClickedSelectorIndex].CurrentCity.Equals(gamePlayers[currentPlayer].CurrentCity))
         {
+            //If either person is a researcher
             if (gamePlayers[currentPlayer].Role.Equals("Researcher") || gamePlayers[lastClickedSelectorIndex].Role.Equals("Researcher"))
             {
+                //This is to see if the current player is giving a card
                 for (int i = 0; i < gamePlayers[currentPlayer].CityCards.Count; i++)
                 {
                     if (gamePlayers[currentPlayer].CityCards[i].Equals(lastCityClicked))
@@ -613,11 +615,12 @@ public class MainGameManager : MonoBehaviour
                         gamePlayers[currentPlayer].CityCards.RemoveAt(i);
                         gaveCard = true;
                         gamePlayers[currentPlayer].decreaseNumPlaysLeft();
-                        nextMove("Gave " + gamePlayers[currentPlayer].CityCards[i] + " to " + (lastClickedSelectorIndex + 1));
+                        nextMove("Gave " + gamePlayers[currentPlayer].CityCards[i] + " to Player " + (lastClickedSelectorIndex + 1));
                         break;
                     }
                 }
-
+                
+                //This is to see if the selected player is giving a card
                 for (int i = 0; i < gamePlayers[lastClickedSelectorIndex].CityCards.Count && (!(gaveCard)); i++)
                 {
                     if (gamePlayers[lastClickedSelectorIndex].CityCards[i].Equals(lastCityClicked))
@@ -626,18 +629,20 @@ public class MainGameManager : MonoBehaviour
                         gamePlayers[lastClickedSelectorIndex].CityCards.RemoveAt(i);
                         gaveCard = true;
                         gamePlayers[currentPlayer].decreaseNumPlaysLeft();
-                        nextMove("Gave " + gamePlayers[lastClickedSelectorIndex].CityCards[i] + " to " + (currentPlayer + 1));
+                        nextMove("Took " + gamePlayers[lastClickedSelectorIndex].CityCards[i] + " from Player " + (lastClickedSelectorIndex + 1));
                         break;
                     }
 
                 }
             }
 
-            //To take a card
+            //This is if neither person in a researcher
             else
             {
                 for (int i = 0; i < gamePlayers[currentPlayer].CityCards.Count; i++)
                 {
+                    //Make sure the city card that is to be given matches the city they are both in
+                    //This is to give a card
                     if (gamePlayers[currentPlayer].CurrentCity.Equals(gamePlayers[currentPlayer].CityCards[i]))
                     {
                         gamePlayers[lastClickedSelectorIndex].CityCards.Add(gamePlayers[currentPlayer].CityCards[i]);
@@ -651,7 +656,8 @@ public class MainGameManager : MonoBehaviour
 
                 for (int i = 0; (!(gaveCard)) && i < gamePlayers[lastClickedSelectorIndex].CityCards.Count; i++)
                 {
-
+                    //Make sure they are in the same city as the city card that is to be given.
+                    //This is to take a card
                     if (gamePlayers[currentPlayer].CurrentCity.Equals(gamePlayers[lastClickedSelectorIndex].CityCards[i]))
                     {
                         gamePlayers[currentPlayer].CityCards.Add(gamePlayers[lastClickedSelectorIndex].CityCards[i]);
@@ -674,7 +680,7 @@ public class MainGameManager : MonoBehaviour
 
         if (!(gaveCard))
         {
-            nextMove("Unknown Error sharing");
+            nextMove("Error sharing");
         }
         
     }
