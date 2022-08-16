@@ -30,5 +30,7 @@ The info cards is the main form of communication with the players. It tells whos
 
 <img width="226" alt="image" src="https://user-images.githubusercontent.com/79670114/184672139-991b07ac-7311-43ad-8afd-1ad4f426e22b.png"> <img width="221" alt="image" src="https://user-images.githubusercontent.com/79670114/184704502-1d9f2a64-f5f7-4765-8406-67961fe7ce5c.png"> <img width="224" alt="image" src="https://user-images.githubusercontent.com/79670114/184704661-4c69e700-caae-4380-b3c2-5dce7dd3b576.png">
 
+The specifc rules of the game are the same as that of the board game. 
+
 
 
