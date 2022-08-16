@@ -8,7 +8,7 @@ The Front Page looks as such:
 ## Game Page
 This version carries with it much of the original content including 
   - Several Player roles
-  - Randomized infection and city cards deck. 
+  - Randomized infection and city cards decks
   - Infection rate and outbreak counter
   - All 8 player actions integrated with player roles
   - Epidemic cards and outbreaks
@@ -17,13 +17,13 @@ As in the original game, you lose by running out of city cards, disease cubes, o
 
 <img width="838" alt="image" src="https://user-images.githubusercontent.com/79670114/184667910-2470b481-de9b-44d2-b565-e7c4def17cc8.png">
 
-The colors on each city represent the number of disease cubes there of the most prominent disease in that city. Information about all diseases in a city is available in the information card when you cover over a city with the mouse, but the color system provides a simple, quick way to understand disease spread and danger zones. 
+The colors on each city represent the number of disease cubes there of the most prominent disease in that city. In most cases, this will just be the disease listed on that city's city card, but outbreaks can lead to multi diseased cities. Information about all diseases in a city is available in the information card when you hover over a city with the mouse, but the color system provides a quick simpple way to understand disease spread and danger zones. 
 
-When using the action buttons, you would click on the associated city/player/disease, then the button.
+You use the action buttons to get through turns. To use them, you would click on the associated city/player/disease, then the button.
 
 For example, if you want to drive to Chicago. You *click on the Chicago marker*, then *click the drive button*. 
 
-Or to take the Madrid card from player 3, you *click on the Madrid marker*, then *click the player 2 selector*, then *click Share Knowledge*.
+Or to take the Madrid card from player 3's city card deck, you *click on the Madrid marker*, then *click the player 3 selector*, then *click Share Knowledge*.
 
 The info cards is the main form of communication with the players. It tells whose turn it is, how many plays they have, new and existing city cards, outbreaks, etc. 
 
